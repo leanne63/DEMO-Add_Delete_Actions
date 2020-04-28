@@ -8,38 +8,42 @@
 import UIKit
 
 class TableViewController: UITableViewController {
+	
+	let cellReuseIdentifier = "ReusableTableCell"
+	var tableData = [
+		(title:"Example Title 1", subtitle: "Example Subtitle 1"),
+		(title:"Example Title 2", subtitle: "Example Subtitle 2"),
+		(title:"Example Title 3", subtitle: "Example Subtitle 3"),
+		(title:"Example Title 4", subtitle: "Example Subtitle 4"),
+		(title:"Example Title 5", subtitle: "Example Subtitle 5"),
+	]
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+		return tableData.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath)
+		let row = indexPath.row
+		
+		cell.textLabel?.text = tableData[row].title
+		cell.detailTextLabel?.text = tableData[row].subtitle
+		
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
