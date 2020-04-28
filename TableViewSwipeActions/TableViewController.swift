@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class TableViewController: UITableViewController {	// alternatively, UIViewController, UITableViewDelegate, UITableViewDataSource
 	
 	let cellReuseIdentifier = "ReusableTableCell"
 	var tableData = [
