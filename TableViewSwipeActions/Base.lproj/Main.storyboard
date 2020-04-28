@@ -42,7 +42,7 @@
         <!--Detail View Controller-->
         <scene sceneID="5Xh-xc-OIn">
             <objects>
-                <viewController id="VfA-9A-1Br" userLabel="Detail View Controller" sceneMemberID="viewController">
+                <viewController id="VfA-9A-1Br" userLabel="Detail View Controller" customClass="DetailViewController" customModule="TableViewSwipeActions" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cUX-BR-6G6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,6 +87,10 @@
                         <viewLayoutGuide key="safeArea" id="zxo-ex-9uN"/>
                     </view>
                     <navigationItem key="navigationItem" id="Hdz-34-TNs"/>
+                    <connections>
+                        <outlet property="subtitleTextField" destination="xAE-zD-fh2" id="6M9-3G-DQe"/>
+                        <outlet property="titleTextField" destination="14Y-cF-5yo" id="Eo2-Ey-GYh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QdT-Sv-kcY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
