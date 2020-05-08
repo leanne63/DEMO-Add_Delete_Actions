@@ -14,9 +14,9 @@ This app demonstrates the requirements to simply add delete functionality to a t
 
 - Add the `UITableViewDataSource` protocol to your class, if necessary. (The `UITableViewController` class internally declares this protocol.)
 - If your table view requires that some rows NOT be editable, then implement the `tableView(_:canEditRow:)` method. Return `true` if the row is editable or `false` if it's not.
-- Implement the `tableView(_:commit:forRowAt:)` method, including the following actions when `editingStyle` is `delete`:
-    1. delete the source data for the current row
-    2. delete the table view's row
+- Implement the `tableView(_:commit:forRowAt:)` method, including the following actions when `editingStyle` is `delete`:    
+&nbsp;&nbsp;1. Delete the source data for the current row  
+&nbsp;&nbsp;2. Delete the table view's row  
 
 
 ### *Setup Requirements*
